@@ -1,23 +1,20 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+
+import { talk } from './talkTime'
+
 import './App.css';
 
+const presentTime = `${new Date().getHours()}:${new Date().getMinutes()}`;
+
+
+
 function App() {
+  const [ timeWord, setTimeWord ] = useState(' ')
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <p>The current time will be dispaly when the button is clicked</p>
+      <button onClick={()=> setTimeWord(talk(presentTime)) }> Click here</button>
+      <h1> {timeWord} </h1>
     </div>
   );
 }
