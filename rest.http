@@ -1,0 +1,7 @@
+
+POST http://localhost:5000/human_friendly
+Content-Type: application/json
+
+{
+    "numericTime": "23:33"
+}

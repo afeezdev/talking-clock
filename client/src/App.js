@@ -1,17 +1,36 @@
 import React, { useState } from 'react';
-
 import { talkTime } from './talkTime'
 
 import './App.css';
-
-const presentTime = `${new Date().getHours()}:${new Date().getMinutes()}`;
 
 
 function App() {
   const [ timeWord, setTimeWord ] = useState(' ')
   const [ input, setInput ] = useState(' ')
   const [ inputDisplay, setInputDisplay ] = useState(' ')
+  const [ jsonParameter, setJsonParameter ] = useState(' ')
 
+  
+const presentTime = `${new Date().getHours()}:${new Date().getMinutes()}`;
+
+const getJsonResponse = () => {
+  fetch("http://localhost:5000/human_friendly", {
+    method: "post",
+    headers: { "Content-Type": "application/JSON" },
+    body: JSON.stringify({
+      numericTime: jsonParameter
+    }),
+  })
+    .then((response) => response.json())
+    .then((user) => {
+      alert(JSON.stringify({
+        numericTime: user
+      }))
+    })
+    .catch((err) => {
+      alert("Wrong Format or invalid time");
+    });	
+};
 
   return (
     <div className="App">
@@ -24,7 +43,7 @@ function App() {
         <p>Type your time into the input field in correct format</p>
       <input
         className='input-display' 
-        type='search'
+        type="text"
         placeholder='format "00:00"' 
         onChange={event => setInput(event.target.value)}
        />
@@ -32,6 +51,18 @@ function App() {
          Display
        </button>
        	<h1>{inputDisplay}</h1>
+      </div>
+      <div className='input-time'>
+        <p>Type your time in correct to get json response from the server</p>
+      <input
+        className='json-display' 
+        type='text'
+        placeholder='format "00:00"' 
+        onChange={event => setJsonParameter(event.target.value)}
+       />
+       <button onClick={()=> getJsonResponse()}>
+         Click for Json Response
+       </button>
       </div>
     </div>
     
