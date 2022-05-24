@@ -31,7 +31,7 @@ function App() {
        <button onClick={()=> setInputDisplay(talkTime(input))}>
          Display
        </button>
-       	<p>{inputDisplay}</p>
+       	<h1>{inputDisplay}</h1>
       </div>
     </div>
     
