@@ -35,11 +35,13 @@ const getJsonResponse = () => {
   return (
     <div className="App">
       <div className='current-time'>
+        <h1>Objctive 1</h1>
         <p>The current time will be displayed when the button is clicked</p>
         <button onClick={()=> setTimeWord(talkTime(presentTime)) }> Click here</button>
         <h1> {timeWord} </h1>
       </div>
       <div className='input-time'>
+      <h1>Objctive 2</h1>
         <p>Type your time into the input field in correct format</p>
       <input
         className='input-display' 
@@ -52,7 +54,9 @@ const getJsonResponse = () => {
        </button>
        	<h1>{inputDisplay}</h1>
       </div>
-      <div className='input-time'>
+      <div className='json-time'>
+      <h1>Objctive 3</h1>
+
         <p>Type your time in correct to get json response from the server</p>
       <input
         className='json-display' 

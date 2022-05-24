@@ -11,7 +11,7 @@
 
 .current-time {
   background-color: #365ca8;
-  min-height: 50vh;
+  min-height: 33vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -22,7 +22,17 @@
 
 .input-time {
   background-color: #0a3486;
-  min-height: 50vh;
+  min-height: 33vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+.json-time {
+  background-color: #5457dd;
+  min-height: 33vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -41,9 +51,10 @@ button {
   cursor: pointer;
 }
 
-.input-display {
-  width: 50%;
+input {
+  width: 200px;
   padding: 12px 20px;
+  border-radius: 20px;
   margin: 8px 0;
   box-sizing: border-box;
 }
