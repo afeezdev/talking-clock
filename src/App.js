@@ -15,13 +15,15 @@ function App() {
 
   return (
     <div className="App">
-      <div>
-        <p>The current time will be dispaly when the button is clicked</p>
+      <div className='current-time'>
+        <p>The current time will be displayed when the button is clicked</p>
         <button onClick={()=> setTimeWord(talkTime(presentTime)) }> Click here</button>
         <h1> {timeWord} </h1>
       </div>
-      <div>
-      <input 
+      <div className='input-time'>
+        <p>Type your time into the input field in correct format</p>
+      <input
+        className='input-display' 
         type='search'
         placeholder='format "00:00"' 
         onChange={event => setInput(event.target.value)}
