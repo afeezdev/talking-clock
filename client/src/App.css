@@ -18,6 +18,8 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  padding-bottom: 2em;
+  margin-bottom: 1em;
 }
 
 .input-time {
@@ -29,6 +31,7 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  margin-bottom: 1em;
 }
 .json-time {
   background-color: #5457dd;
