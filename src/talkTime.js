@@ -1,12 +1,12 @@
 import { HOURS, ONES, TEENS, TENS } from '../src/data'
 
-export const talk = (time) => {
+export const talkTime = (time) => {
     let currentTime = ''
     const [h, m] = time.split(':').map(n => parseInt(n));
     const hour = HOURS[h % 12];    
   
     let minute = '';
-    if( m == 0) {
+    if( m === 0) {
         currentTime = [ hour, "o'clock"].join(' ');
     }
     else if (m < 10) {
@@ -20,7 +20,7 @@ export const talk = (time) => {
         currentTime = [ minute, 'past', hour].join(' ')
     }
     
-    else if ( m == 30) {
+    else if ( m === 30) {
         minute = `half`;
         currentTime = [ minute, 'past', hour].join(' ')
     }
