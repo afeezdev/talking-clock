@@ -18,7 +18,7 @@ class JsonTime extends Component {
   }
 
 getJsonResponse = () => {
-  fetch("http://localhost:5000/human_friendly", {
+  fetch("https://talk-clock-api.herokuapp.com/human_friendly", {
     method: "post",
     headers: { "Content-Type": "application/JSON" },
     body: JSON.stringify({
