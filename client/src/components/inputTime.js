@@ -1,27 +1,45 @@
-import React, { useState } from 'react';
+import React, { Component } from 'react';
 
 import { talkTime } from '../talkTime';
 
-function InputTime() {
-    const [ input, setInput ] = useState(' ')
-    const [ inputDisplay, setInputDisplay ] = useState(' ')
-      
-    return (
-        <div className='input-time'>
+class InputTime extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            inputTime: "",
+            timeInWord: ""
+            };
+    }
+
+    onInputChange = (event) => {
+		this.setState({ inputTime: event.target.value });
+	};
+
+    timeDispay = () => {
+        let time = talkTime(this.state.inputTime)
+        this.setState({ timeInWord: time })
+    }
+
+    render() {
+        
+        return (
+            <div className='input-time'>
             <h1>Objctive 2</h1>
             <p>Type your time into the input field in correct format</p>
             <input
                 className='input-display' 
                 type="text"
                 placeholder='format "00:00"' 
-                onChange={event => setInput(event.target.value)}
+                onChange={this.onInputChange}
             />
-            <button onClick={()=> setInputDisplay(talkTime(input))}>
+            <button onClick={this.timeDispay}>
                 Display
             </button>
-       	    <h1>{inputDisplay}</h1>
+       	    <h1>{this.state.timeInWord}</h1>
         </div>
-        )
-    }
+        );
+      }
+
+}
 
 export default InputTime;
