@@ -55,10 +55,11 @@ button {
 }
 
 input {
-  width: 150px;
+  width: 110px;
   font-size: large;
   padding: 12px 20px;
   border-radius: 20px;
   margin: 8px 0;
+  text-align: center;
   box-sizing: border-box;
 }

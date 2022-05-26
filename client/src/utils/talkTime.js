@@ -5,13 +5,15 @@ export const timeSplit = (time) => {
     return splittedTime
 }
 
-// const [h, m] = 
-
+export const hourTime = (h) => {
+    let hour = HOURS[h % 12]
+    return hour
+}
 
 export const talkTime = (time) => {
     const [h, m] = timeSplit(time)
     let currentTime = ''
-    const hour = HOURS[h % 12];    
+    const hour = hourTime(h);    
   
     let minute = '';
     if( m === 0) {
