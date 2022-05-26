@@ -14,7 +14,7 @@ export const talkTime = (time) => {
     const [h, m] = timeSplit(time)
     let currentTime = ''
     const hour = hourTime(h);    
-  
+        
     let minute = '';
     if( m === 0) {
         currentTime = [ hour, "o'clock"].join(' ');
@@ -44,6 +44,9 @@ export const talkTime = (time) => {
       minute = `${TEENS[m1%10]}`
   
         currentTime = [minute, 'to', HOURS[(h % 12) + 1 ]].join(' ');
+    }
+    else if (h === undefined || m === undefined) {
+        currentTime = "Invalid Number or time format"
     }
     else {
         let m1 = 60 - Number(m) 
