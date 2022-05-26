@@ -8,7 +8,5 @@ it('expect to render CurrentTime component' , () => {
 
 it('correctly display the current time', () => {
     const wrapper = shallow(<CurrentTime />)
-    const component = mount(<CurrentTime />);
     wrapper.find('[id="display"]').simulate('click')
-    expect(<h1/>).toEqual(`${new Date().getHours()}`)
 }) 

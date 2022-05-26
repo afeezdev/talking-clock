@@ -1,8 +1,16 @@
-import { HOURS, ONES, TEENS, TENS } from '../src/data'
+import { HOURS, ONES, TEENS, TENS } from './data'
+
+export const timeSplit = (time) => {
+    let splittedTime = time.split(':').map(n => parseInt(n));
+    return splittedTime
+}
+
+// const [h, m] = 
+
 
 export const talkTime = (time) => {
+    const [h, m] = timeSplit(time)
     let currentTime = ''
-    const [h, m] = time.split(':').map(n => parseInt(n));
     const hour = HOURS[h % 12];    
   
     let minute = '';

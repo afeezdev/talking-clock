@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { talkTime } from '../talkTime';
+import { talkTime } from '../utils/talkTime';
 
 const presentTime = `${new Date().getHours()}:${new Date().getMinutes()}`;
 

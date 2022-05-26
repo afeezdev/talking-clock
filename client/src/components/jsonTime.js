@@ -46,7 +46,7 @@ getJsonResponse = () => {
           <input
             className='json-display' 
             type='text'
-            placeholder='format "00:00"' 
+            placeholder='00:00' 
             onChange={this.onInputChange}
           />
           <button onClick={this.getJsonResponse}>

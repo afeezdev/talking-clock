@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { talkTime } from '../talkTime';
+import { talkTime } from '../utils/talkTime';
 
 class InputTime extends Component {
     constructor(props) {
@@ -29,7 +29,7 @@ class InputTime extends Component {
             <input
                 className='input-display' 
                 type="text"
-                placeholder='format "00:00"' 
+                placeholder='00:00' 
                 onChange={this.onInputChange}
             />
             <button onClick={this.timeDispay}>
