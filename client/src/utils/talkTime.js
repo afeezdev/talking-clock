@@ -10,6 +10,10 @@ export const hourTime = (h) => {
     return hour
 }
 
+export const minuteTime = () => {
+    
+}
+
 export const talkTime = (time) => {
     const [h, m] = timeSplit(time)
     let currentTime = ''
