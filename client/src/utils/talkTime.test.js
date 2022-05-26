@@ -66,8 +66,15 @@ it('is returning minutes in words', ()=> {
     expect(minuteTime(2)).toEqual(dbMockOnes[2])
     expect(minuteTime(19)).toEqual(dbMockTeens[19%10])
     expect(minuteTime(20)).toEqual(`${dbMockTens[Math.floor(20/10)]} ${dbMockOnes[20%10]}`)
+    expect(minuteTime(30)).toEqual(`half`)
+    expect(minuteTime(35)).toEqual(`${dbMockTens[Math.floor((60-35)/10)]} ${dbMockOnes[(60-35)%10]}`)
+    expect(minuteTime(46)).toEqual(dbMockTeens[(60-46)%10])
+    expect(minuteTime(57)).toEqual(`${dbMockTens[Math.floor((60-57)/10)]} ${dbMockOnes[(60-57)%10]}`)
 })
 
 it('is returning time in human friendly', ()=> {
     expect(talkTime('22:34')).toEqual("twenty six to eleven")
+    expect(talkTime('2:00')).toEqual("two o'clock")
+    expect(talkTime('5:30')).toEqual("half past five")
+    expect(talkTime('21:24')).toEqual("twenty four past nine")
 })
