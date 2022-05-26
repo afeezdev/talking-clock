@@ -1,6 +1,6 @@
 import { shallow, mount, render } from 'enzyme';
 import React from 'react';
-import talkTime from './talkTime'
+import {talkTime, timeSplit } from './talkTime'
 
 let dbMock = [
     '',
@@ -15,6 +15,6 @@ let dbMock = [
     'nine',
 ]
 
-it('is a test', ()=> {
-    console.log
+it('is returning time in array of integers', ()=> {
+    expect(timeSplit("22:23")).toEqual([22, 23])
 })
