@@ -25,11 +25,10 @@ class CurrentTime extends Component {
             <div id='current-time' className='current-time'>
                 <h1>Objctive 1</h1>
                 <p>The current time is:</p>
+                <h1 id='time-word'> {this.state.timeInWord} </h1>
                 <button onClick={() => this.timeDispay()}>
-                {/* () => onRouteChange('register') */}
                     Refresh
                 </button>
-                <h1 id='time-word'> {this.state.timeInWord} </h1>
             </div>
         );
       }
