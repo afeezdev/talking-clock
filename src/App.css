@@ -1,0 +1,65 @@
+.App {
+  text-align: center;
+}
+
+.current-time {
+  height: 40vmin;
+  /* pointer-events: none; */
+}
+
+
+
+.current-time {
+  background-color: #365ca8;
+  min-height: 33vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  padding-bottom: 2em;
+  margin-bottom: 1em;
+}
+
+.input-time {
+  background-color: #0a3486;
+  min-height: 33vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  margin-bottom: 1em;
+}
+.json-time {
+  background-color: #5457dd;
+  min-height: 33vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+button {
+  background-color: black;
+  color: white;
+  font-size: calc(10px + 2vmin);
+  padding: 10px 60px;
+  border-radius: 5px;
+  margin: 10px 0px;
+  cursor: pointer;
+}
+
+input {
+  width: 110px;
+  font-size: large;
+  padding: 12px 20px;
+  border-radius: 20px;
+  margin: 8px 0;
+  text-align: center;
+  box-sizing: border-box;
+}
