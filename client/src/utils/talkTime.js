@@ -1,15 +1,21 @@
 import { HOURS, ONES, TEENS, TENS } from './data'
 
+export const presentTime = `${new Date().getHours()}:${new Date().getMinutes()}`;
+
+
+// Spliting the time 
 export const timeSplit = (time) => {
     let splittedTime = time.split(':').map(n => parseInt(n));
     return splittedTime
 }
 
+// hour
 export const hourTime = (h) => {
     let hour = HOURS[h % 12]
     return hour
 }
 
+// minute
 export const minuteTime = ( m ) => {
     let minute = '';
     
@@ -40,6 +46,7 @@ export const minuteTime = ( m ) => {
     return minute
 }
 
+// human friendly time 
 export const talkTime = (time) => {
     const [h, m] = timeSplit(time)
     let currentTime = ''

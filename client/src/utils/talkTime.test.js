@@ -1,5 +1,4 @@
-import { shallow, mount, render } from 'enzyme';
-import React from 'react';
+import { shallow } from 'enzyme';
 import {talkTime, timeSplit, hourTime, minuteTime } from './talkTime'
 
 let dbMockOnes = [
