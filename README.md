@@ -1,5 +1,4 @@
 # talking-clock
-cd client 
 npm install
 npm start 
 Runs the react app  in the development mode.
